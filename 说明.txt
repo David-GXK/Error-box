@@ -1,0 +1,35 @@
+一个angularJs版，注入模式的防误操作弹框。
+
+两种使用方式：
+
+第一种有配置的调用方法：
+
+let showMessage = '提示信息？'
+if(result==true){
+    showMessage = '此操作会XXX？'
+}
+alert({
+    content: showMessage
+}).then(function (data) {
+return 一个promise
+   
+}).then((data) => {
+    if(data){
+       XX
+    }else{
+        XX
+    }
+}).catch(error=>{
+   XX
+});
+
+第二种直接调用：
+
+alert({
+    content: ‘是否确定修改？'
+}).then(function (data) {
+    $scope.XX();
+})
+
+
+
